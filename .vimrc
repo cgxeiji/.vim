@@ -53,7 +53,12 @@ set t_Co=256
 set background=dark
 " colorscheme molokai
 
-set number
+set number relativenumber
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+:augroup END
 
 set autoindent
 set smartindent
@@ -63,3 +68,5 @@ let NERDTreeShowHidden=1
 
 nmap <silent> <Leader>x :NERDTreeToggle<cr>
 nmap <silent> <Leader>h :NERDTreeFind<cr>
+
+nmap <silent> <Leader>, :noh<cr>
