@@ -13,6 +13,7 @@ Plugin 'tomasr/molokai'
 " Load utilities
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
 
 call vundle#end()
 filetype plugin indent on
@@ -70,3 +71,4 @@ nmap <silent> <Leader>x :NERDTreeToggle<cr>
 nmap <silent> <Leader>h :NERDTreeFind<cr>
 
 nmap <silent> <Leader>, :noh<cr>
+nmap <silent> <Leader>s :w<cr>
