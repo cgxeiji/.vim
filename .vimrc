@@ -15,6 +15,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
+Plugin 'terryma/vim-smooth-scroll'
 
 call vundle#end()
 filetype plugin indent on
@@ -53,7 +54,7 @@ set encoding=utf8
 let base16colorspace=256
 set t_Co=256
 set background=dark
-" colorscheme molokai
+colorscheme molokai
 
 set number relativenumber
 :augroup numbertoggle
@@ -70,6 +71,11 @@ let NERDTreeShowHidden=1
 
 nmap <silent> <Leader>x :NERDTreeToggle<cr>
 nmap <silent> <Leader>h :NERDTreeFind<cr>
+
+noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
+noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
+noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
+noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
 nmap <silent> <Leader>, :noh<cr>
 nmap <silent> <Leader>s :w<cr>
