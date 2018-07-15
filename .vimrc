@@ -16,6 +16,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'terryma/vim-smooth-scroll'
+Plugin 'vim-python/python-syntax'
 
 call vundle#end()
 filetype plugin indent on
@@ -76,6 +77,8 @@ noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
 noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
 noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
 noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
+
+let g:python_highlight_all = 1
 
 nmap <silent> <Leader>, :noh<cr>
 nmap <silent> <Leader>s :w<cr>
