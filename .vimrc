@@ -82,3 +82,5 @@ let g:python_highlight_all = 1
 
 nmap <silent> <Leader>, :noh<cr>
 nmap <silent> <Leader>s :w<cr>
+
+imap kj <Esc>
