@@ -21,7 +21,8 @@ Plugin 'sickill/vim-pasta'
 Plugin 'scrooloose/syntastic'
 Plugin 'ervandew/supertab'
 Plugin 'reedes/vim-wordy'
-Plugin 'suan/vim-instant-markdown'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
 call vundle#end()
 filetype plugin indent on
@@ -94,6 +95,8 @@ set splitright
 " Spell check for Markdown files
 autocmd BufRead,BufNewFile *.md setlocal spell
 
+imap kj <Esc>
+
 " air-line
 let g:airline_powerline_fonts = 1
 
@@ -123,3 +126,6 @@ let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
+
+" Markdown Configuration
+set conceallevel=2
