@@ -17,6 +17,11 @@ Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'terryma/vim-smooth-scroll'
 Plugin 'vim-python/python-syntax'
+Plugin 'sickill/vim-pasta'
+Plugin 'scrooloose/syntastic'
+Plugin 'ervandew/supertab'
+Plugin 'reedes/vim-wordy'
+Plugin 'suan/vim-instant-markdown'
 
 call vundle#end()
 filetype plugin indent on
@@ -82,6 +87,12 @@ let g:python_highlight_all = 1
 
 nmap <silent> <Leader>, :noh<cr>
 nmap <silent> <Leader>s :w<cr>
+
+set splitbelow
+set splitright
+
+" Spell check for Markdown files
+autocmd BufRead,BufNewFile *.md setlocal spell
 
 " air-line
 let g:airline_powerline_fonts = 1
