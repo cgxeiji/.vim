@@ -23,6 +23,7 @@ Plugin 'ervandew/supertab'
 Plugin 'reedes/vim-wordy'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'fatih/vim-go'
 
 call vundle#end()
 filetype plugin indent on
@@ -94,6 +95,9 @@ set splitright
 
 " Spell check for Markdown files
 autocmd BufRead,BufNewFile *.md setlocal spell
+
+" Add run keybinding for Go
+autocmd FileType go nmap <buffer> <Leader>r :GoRun<cr>
 
 imap kj <Esc>
 
