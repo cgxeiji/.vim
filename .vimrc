@@ -24,6 +24,8 @@ Plugin 'reedes/vim-wordy'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'fatih/vim-go'
+Plugin 'Shougo/deoplete.nvim'
+Plugin 'zchee/deoplete-go', { 'do': 'make'}
 
 call vundle#end()
 filetype plugin indent on
@@ -111,6 +113,9 @@ let g:go_highlight_variable_declarations = 1
 let g:go_highlight_variable_assignments = 1
 
 imap kj <Esc>
+
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
 
 " air-line
 let g:airline_powerline_fonts = 1
