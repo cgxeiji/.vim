@@ -26,6 +26,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'fatih/vim-go'
 Plugin 'Shougo/deoplete.nvim'
 Plugin 'zchee/deoplete-go', { 'do': 'make'}
+Plugin 'tell-k/vim-autopep8'
 
 call vundle#end()
 filetype plugin indent on
@@ -99,6 +100,10 @@ set splitright
 " Spell check for Markdown files
 autocmd BufRead,BufNewFile *.md setlocal spell
 
+" Auto PEP8 on save of Python files
+autocmd BufRead,BufNewFile *.py let g:autopep8_on_save = 1
+autocmd BufRead,BufNewFile *.py let g:autopep8_disable_show_diff = 1
+
 " Add run keybinding for Go
 autocmd FileType go nmap <buffer> <Leader>r :GoRun<cr>
 let g:go_highlight_operators = 1
@@ -149,3 +154,9 @@ let g:airline_symbols.linenr = ''
 
 " Markdown Configuration
 set conceallevel=2
+
+
+
+highlight OverLength ctermbg=darkred ctermfg=white guibg=#FFD9D9
+match OverLength /\%80v.\+/
+
