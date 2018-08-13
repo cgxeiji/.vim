@@ -53,7 +53,7 @@ set ignorecase
 set smartcase
 set hlsearch
 set incsearch
-set nolazyredraw
+set lazyredraw
 
 set magic
 
@@ -89,7 +89,6 @@ noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
 noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
 noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
-let g:python_highlight_all = 1
 
 nmap <silent> <Leader>, :noh<cr>
 nmap <silent> <Leader>s :w<cr>
@@ -103,6 +102,9 @@ autocmd BufRead,BufNewFile *.md setlocal spell
 " Auto PEP8 on save of Python files
 autocmd BufRead,BufNewFile *.py let g:autopep8_on_save = 1
 autocmd BufRead,BufNewFile *.py let g:autopep8_disable_show_diff = 1
+
+autocmd BufRead,BufNewFile *.py let g:python_highlight_all = 1
+autocmd BufRead,BufNewFile *.py let g:python_slow_sync = 0
 
 " Add run keybinding for Go
 autocmd FileType go nmap <buffer> <Leader>r :GoRun<cr>
